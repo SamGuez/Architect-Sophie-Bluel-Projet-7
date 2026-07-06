@@ -186,3 +186,30 @@ footer nav ul {
 	margin: 2em
 }
 
+/* --- Filtres façon Booki --- */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.filter-btn {
+    border: 1px solid #1D6154;
+    color: #1D6154;
+    background-color: white;
+    border-radius: 60px;
+    padding: 10px 25px;
+    font-family: 'Syne';
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #1D6154;
+    color: white;
+}
