@@ -213,3 +213,93 @@ footer nav ul {
     background-color: #1D6154;
     color: white;
 }
+
+/* --- Page de login --- */
+
+#login-page {
+    width: 40%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#login-page h2 {
+    margin-bottom: 30px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#login-form label {
+    text-align: left;
+    font-weight: 600;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    height: 50px;
+    font-size: 1.1em;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    padding: 10px;
+}
+
+#login-form input[type="submit"] {
+	padding : 10px 0;
+    width: 200px;
+    margin: 30px auto;
+    background-color: #1D6154;
+    color: white;
+    border-radius: 60px;
+    font-family: 'Syne';
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.forgot-password {
+    font-size: 0.9em;
+    color: #3D3D3D;
+    text-decoration: underline;
+}
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #B1663C;
+}
+
+#edition-banner {
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+	margin-left:  -50px;
+	margin-right: -50px;
+}
+.hidden {
+    display: none;
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+	margin-bottom: 20px;
+}
+
+.edit-btn {
+    border: none;
+    background: transparent;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.edit-btn i {
+    margin-right: 8px;
+}

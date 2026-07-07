@@ -1,3 +1,33 @@
+//Token
+const token = localStorage.getItem("token");
+
+if (token) {
+    document.getElementById("edition-banner").classList.remove("hidden");
+}
+
+const loginLink = document.getElementById("login-link");
+
+if (token) {
+    loginLink.textContent = "logout";
+    loginLink.href = "#";
+}
+
+loginLink.addEventListener("click", () => {
+    if (token) {
+        localStorage.removeItem("token");
+        window.location.reload();
+    }
+});
+
+if (token) {
+    document.getElementById("filters").style.display = "none";
+}
+
+if (token) {
+    document.getElementById("edit-button").classList.remove("hidden");
+}
+
+//Fin token
 async function getWorks() {
     const response = await fetch("http://localhost:5678/api/works");
     const works = await response.json();
@@ -50,5 +80,7 @@ function setupFilters(works) {
         });
     });
 }
+
+
 
 init();
