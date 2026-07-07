@@ -82,6 +82,35 @@
 		</ul>
 	</nav>
 </footer>
+
+<!-- MODALE -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <!-- Écran galerie -->
+        <div id="modal-gallery">
+            <h3>Galerie photo</h3>
+            <div id="modal-works"></div>
+            <button id="open-add-photo">Ajouter une photo</button>
+        </div>
+
+        <!-- Écran formulaire -->
+        <div id="modal-add" class="hidden">
+            <span id="back-to-gallery" class="back-arrow">&#8592;</span>
+            <h3>Ajouter une photo</h3>
+
+            <form id="add-form">
+                <input type="file" id="photo-input">
+                <input type="text" id="title-input" placeholder="Titre">
+                <select id="category-input"></select>
+                <button type="submit">Valider</button>
+            </form>
+        </div>
+
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
