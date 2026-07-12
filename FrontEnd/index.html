@@ -99,10 +99,16 @@
         <!-- Écran formulaire -->
         <div id="modal-add" class="hidden">
             <span id="back-to-gallery" class="back-arrow">&#8592;</span>
-            <h3>Ajouter une photo</h3>
+            <h3>Ajout photo</h3>
 
             <form id="add-form">
-                <input type="file" id="photo-input">
+<div id="photo-upload-area">
+    <i class="fa-regular fa-image"></i>
+    <button id="photo-upload-btn">+ Ajouter photo</button>
+    <p>jpg, png — 4 Mo max</p>
+    <input type="file" id="photo-input" accept="image/*" class="hidden">
+</div>
+
                 <input type="text" id="title-input" placeholder="Titre">
                 <select id="category-input"></select>
                 <button type="submit">Valider</button>

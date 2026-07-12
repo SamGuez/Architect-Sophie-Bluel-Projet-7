@@ -304,7 +304,9 @@ nav a:hover {
     margin-right: 8px;
 }
 
-/* --- Modal --- */
+/* --- MODALE (MAQUETTE OPENCLASSROOMS) --- */
+
+/* Fond */
 .modal {
     position: fixed;
     top: 0;
@@ -315,30 +317,155 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-	z-index: 9999; /* IMPORTANT */
+    z-index: 9999;
 }
 
+/* Contenu */
 .modal-content {
     background: white;
-    padding: 30px;
-    width: 500px;
+    width: 400px;
+    padding: 40px;
     border-radius: 10px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Titre */
+.modal-content h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Bouton fermer */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Flèche retour */
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Galerie interne */
+#modal-works {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-work {
     position: relative;
 }
 
-.hidden {
-    display: none;
+.modal-work img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
-.close-modal {
+/* Icône poubelle */
+.delete-icon {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 5px;
+    right: 5px;
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 12px;
 }
 
-.back-arrow {
+/* Bouton ajouter une photo */
+#open-add-photo {
+    margin-top: 30px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background: #1D6154;
+    color: white;
     cursor: pointer;
-    font-size: 22px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Formulaire */
+#add-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#add-form input,
+#add-form select {
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);;
+    border-radius: 4px;
+}
+
+#add-form button {
+    background: #1D6154;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.modal.hidden {
+    display: none !important;
+}
+
+/* ajouter une photo */
+#photo-upload-area {
+    background-color: #e8f1f6;
+    border-radius: 3px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+#photo-upload-area i {
+    font-size: 60px;
+    color: #b9c5cc;
+}
+
+#photo-upload-btn {
+    background-color: #cbd6dc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#photo-upload-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
