@@ -16,7 +16,7 @@ form.addEventListener("submit", async (event) => {
         if (!response.ok) {
             throw new Error("Identifiants incorrects");
         }
-
+//recuperation du token
         const data = await response.json();
 
         // Stocker le token

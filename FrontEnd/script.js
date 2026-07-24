@@ -27,7 +27,7 @@ if (token) {
     document.getElementById("edit-button").classList.remove("hidden");
 }
 
-//Fin token
+//Récupération des projets depuis l’API
 async function getWorks() {
     const response = await fetch("http://localhost:5678/api/works");
     const works = await response.json();
@@ -66,6 +66,7 @@ async function init() {
     populateCategorySelect(categories);
 }
 
+// Gestion des filtres
 function setupFilters(works) {
     const buttons = document.querySelectorAll(".filter-btn");
 
@@ -102,10 +103,12 @@ editButton.addEventListener("click", () => {
 const modal = document.getElementById("modal");
 const closeModal = document.querySelector(".close-modal");
 
+//  Le clic sur la croix déclenche la fermeture
 closeModal.addEventListener("click", () => {
     modal.classList.add("hidden");
 });
 
+// Le clic en dehors de la modale déclenche la fermeture
 modal.addEventListener("click", (event) => {
     if (event.target === modal) {
         modal.classList.add("hidden");
@@ -185,7 +188,7 @@ photoInput.addEventListener("change", () => {
     if (!file) return;
 
     const reader = new FileReader();
-
+// affichage image dans la zone d'upload
     reader.onload = function(e) {
         const uploadArea = document.getElementById("photo-upload-area");
         uploadArea.innerHTML = `<img src="${e.target.result}" alt="preview">`;
